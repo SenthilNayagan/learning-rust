@@ -1,5 +1,5 @@
 # learning-rust
-Learning Rust from basics
+Learning Rust from basics to advance.
 
 ## Root Cargo.toml
 **Why no [package]? on root `Cargo.toml`:** The root `Cargo.toml` is not a crate itself. It is just a workspace definition file that tells Cargo:
@@ -31,7 +31,7 @@ serde = { workspace = true }   # version inherited from root
 ```
 
 ### Resolver in the root Cargo.toml
-**resolver in the root Cargo.toml** sets the dependency resolution strategy for the entire workspace. Since it's in the root, it applies to all crates in the workspace uniformly. We only need to declare it once here rather than in every individual crate's `Cargo.toml`.
+The **resolver in the root Cargo.toml** sets the dependency resolution strategy for the entire workspace. Since it's in the root, it applies to all crates in the workspace uniformly. We only need to declare it once here rather than in every individual crate's `Cargo.toml`.
 
 `resolver = "1"` — old behavior (pre-2021)
 The problem it had was feature unification — if two crates in your workspace both depended on the same external crate but needed different features, Cargo would blindly merge all features together globally:
