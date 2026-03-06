@@ -157,3 +157,14 @@ The only exception in our repo is the **playground** crate (for proc macros) whi
 ```bash
 cargo run -p playground   # no --example needed
 ```
+
+## Others
+### Tell Git who we are before pushing our changes into remote repo
+Run these two commands:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+Here, `--global` means this configuration applies to all Git repos on our machine, not just `learning-rust`. We only ever need to do this once per machine. Git stores it in `C:\Users\<your-username>\.gitconfig`, in case of Windows.
