@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "exercises/basics",
+    "exercises/intermediate",
+    "exercises/advanced",
+    "exercises/macros/declarative",
+    "exercises/macros/proc_derive",
+    "exercises/macros/proc_attribute",
+    "exercises/macros/proc_function_like",
+    "exercises/macros/playground",
+]
+resolver = "2"

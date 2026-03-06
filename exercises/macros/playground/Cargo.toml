@@ -1,0 +1,9 @@
+[package]
+name = "playground"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+proc_derive        = { path = "../proc_derive" }
+proc_attribute     = { path = "../proc_attribute" }
+proc_function_like = { path = "../proc_function_like" }
