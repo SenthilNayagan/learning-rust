@@ -168,3 +168,34 @@ git config --global user.email "your-email@example.com"
 ```
 
 Here, `--global` means this configuration applies to all Git repos on our machine, not just `learning-rust`. We only ever need to do this once per machine. Git stores it in `C:\Users\<your-username>\.gitconfig`, in case of Windows.
+
+### Git needs a credential helper (Non personal access tokens)
+Git needs a credential helper to store and retrieve your authentication details when pushing to a remote repository (for example on GitHub, GitLab, or Bitbucket).
+
+In Visual Studio Code on Windows, Git asks us where it should store our credentials so we don't have to enter them every time.
+
+Choose the recommended option, **manager** which refers to Git Credential Manager Core. 
+
+It:
+- securely stores credentials in **Windows Credential Manager**
+- supports OAuth login
+- works well with GitHub / Azure DevOps / GitLab
+- integrates smoothly with VS Code
+
+**What happens internally:** Git will add this setting:
+
+```bash
+git config --global credential.helper manager
+```
+
+We can verify later:
+
+```bash
+git config --global --list
+```
+
+We can view the **Windows Credential Manager** at:
+
+```text
+Control Panel → Credential Manager → Windows Credentials
+```
