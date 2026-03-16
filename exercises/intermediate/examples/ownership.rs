@@ -1,4 +1,8 @@
-// Ownership
+// Ownership is a set of rules that govern how a Rust program manages memory
+// Each value in Rust has an owner.
+// There can only be one owner at a time.
+// When the owner goes out of scope, the value will be dropped.
+// The data types are of a known size, can be stored on the stack and popped off the stack when their scope is over.
 
 fn main() {
     let a: String = String::from("Hello");
